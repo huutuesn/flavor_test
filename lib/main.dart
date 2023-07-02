@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 
 void main() {
+  // just test
   WidgetsFlutterBinding.ensureInitialized();
   FirebaseDatabase.instance.setPersistenceEnabled(true);
   runApp(MyApp());
@@ -69,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               'You have pushed the button this many times.\n'
-                  'This includes all devices, ever.',
+              'This includes all devices, ever.',
             ),
             Text(
               _error == null ? '$_counter' : 'Error: \n${_error.message}',
@@ -99,5 +100,4 @@ class _MyHomePageState extends State<MyHomePage> {
     super.dispose();
     _counterSubscription.cancel();
   }
-
 }
